@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Food Fun</title>
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('reservation') }}">Reservation</a></li>
+                    <li><a href="{{ url_for('faq') }}">Faq</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr width="90%" style="margin-left: 80px;">
+    </header>
+    
+
+    <body>
+        <!-- home -->
+        <!-- home -->
+<div class="home">
+    <div class="overlay"></div>
+    <div class="carousel-container">
+        <!-- Carousel slides -->
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="{{ url_for('static', filename='images/b1.jpg') }}" alt="Slide 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="{{ url_for('static', filename='images/b2.jpg') }}" alt="Slide 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="{{ url_for('static', filename='images/b3.jpg') }}" alt="Slide 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="{{ url_for('static', filename='images/b2.jpg') }}" alt="Slide 4">
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <i class="fas fa-angle-left change-background fa-2x" id="prev"></i>
+        <i class="fas fa-angle-right change-background fa-2x" id="next"></i>
+
+        <!-- Bullets -->
+        <ul class="bullets">
+            <li class="active" data-slide="0"></li>
+            <li data-slide="1"></li>
+            <li data-slide="2"></li>
+            <li data-slide="3"></li>
+        </ul>
+    </div>
+
+    <!-- Text content for home -->
+    <div class="text">
+        <div class="content">
+            <h2>Discover The Flavors!<br /> of food fun.</h2>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem...</p>
+        </div>
+    </div>
+</div>
+<!-- home -->
+
+        <!-- home -->
+        <!--About-->
+        <div class="about" id="about">
+            <div class="container">
+                <h2 class="heading">About Us</h2>
+                <div class="about-content">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/webabout.jpg') }}" alt="about" />
+                    </div>
+                    <div class="text">
+                        <p>Welcome to food fun, where culinary artistry meets heartfelt hospitality. Established in
+                            1996, we embarked on a gastronomic journey with a simple vision—to create a space that
+                            transcends the ordinary, where every meal is a celebration of flavor and a moment to be
+                            cherished. Our chefs, led by the talented Jon , bring passion and creativity to the
+                            kitchen, curating a menu that showcases the finest ingredients sourced from local
+                            farmers and artisans. At food fun, we believe in the power of shared meals to create
+                            lasting memories. Our warm and inviting ambiance, coupled with a commitment to
+                            exceptional service, sets the stage for an experience that goes beyond the plate.
+                            Whether you're joining us for an intimate dinner, a family gathering, or a special
+                            celebration, we invite you to savor the distinctive flavors and genuine hospitality that
+                            define the essence of fun food. Thank you for being part of our culinary story—we look
+                            forward to sharing many more delightful moments with you.</p>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda possimus eos
+                            nam! Amet
+                            at
+                            provident vel minus. Nemo deleniti placeat molestiae vel omnis id optio pariatur
+                            inventore ea
+                            natus! Recusandae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Start gallery-->
+        <div class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="heading">Our Food</h2>
+                <div class="imgs-container">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g1.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g2.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g3.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g4.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g5.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g6.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g7.jpg') }}" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/g8.jpg') }}" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <!--Footer-->
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="social-icons">
+                    <a href="#" target="_blank">
+                        <img src="{{ url_for('static', filename='images/blue-social-media-logo_197792-1759.avif') }}" alt="Facebook">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{{ url_for('static', filename='images/instagram-icon_1057-2227.jpg') }}" alt="Instagram">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{{ url_for('static', filename='images/blue-social-media-logo_197792-2420.jpg') }}" alt="Twitter">
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Opening Hours</h2>
+                    <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                </div>
+
+                <div class="get-in-touch">
+                    <h2>Get in Touch</h2>
+                    <p>Email: foodfun@restaurant.com</p>
+                    <p>Phone: 0078839383 </p>
+                </div>
+
+                <ul class="links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Online Shopping</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <p id="PFooter">&copy; 2024 Food Fun. All rights reserved.</p>
+        </footer>
+
+
+    </body>
+
+</html>
+
+<!--Footer-->
+</body>
+
+</html>
+<script>
+    // Get all the elements
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const bullets = document.querySelectorAll('.bullets li');
+    let currentIndex = 0;
+
+    // Function to go to a specific slide
+    function goToSlide(index) {
+        // Ensure index stays within bounds
+        if (index < 0) {
+            index = slides.length - 1;
+        } else if (index >= slides.length) {
+            index = 0;
+        }
+
+        // Move the carousel by changing its transform property
+        document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+
+        // Update the active class for slides
+        slides.forEach((slide, idx) => {
+            slide.classList.remove('active');
+            if (idx === index) {
+                slide.classList.add('active');
+            }
+        });
+
+        // Update the active bullet
+        bullets.forEach((bullet, idx) => {
+            bullet.classList.remove('active');
+            if (idx === index) {
+                bullet.classList.add('active');
+            }
+        });
+
+        // Update the current index
+        currentIndex = index;
+    }
+
+    // Add event listeners for the arrows
+    prevButton.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+    });
+
+    // Add event listeners for the bullets
+    bullets.forEach(bullet => {
+        bullet.addEventListener('click', (event) => {
+            const index = parseInt(event.target.getAttribute('data-slide'));
+            goToSlide(index);
+        });
+    });
+
+    // Initialize the first slide
+    goToSlide(0);
+</script>
